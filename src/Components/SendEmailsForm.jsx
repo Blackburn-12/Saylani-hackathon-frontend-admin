@@ -31,7 +31,7 @@ const SendEmailsForm = () => {
 
     try {
       const response = await axios.post(
-        `http://localhost:3001/sendPlacementEmails?start=${start}&end=${end}&venue=${venue}&gender=${gender}`
+        `${import.meta.env.VITE_BASE_URL}/sendPlacementEmails?start=${start}&end=${end}&venue=${venue}&gender=${gender}`
       );
       if (response.data.message) {
         setMessage(response.data.message);
