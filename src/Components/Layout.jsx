@@ -79,7 +79,7 @@ export default function Layout({ searchTerm, onSearchChange, onTabChange, select
           withCredentials: true,
         }
       );
-      navigate("/login");
+      navigate("/");
     } catch (error) {
       console.error('Error:', error);
     }
