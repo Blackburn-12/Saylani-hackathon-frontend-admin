@@ -50,7 +50,7 @@ const AdminLogin = () => {
       <form onSubmit={handleSubmit} className="otp-form">
         <span className="main-heading">Enter OTP</span>
         <p className="otp-subheading">
-          We have sent a password to your given email
+          Please enter the OPT we have sent you to Login
         </p>
         <div className="input-container">
           {[...Array(6)].map((_, i) => (
