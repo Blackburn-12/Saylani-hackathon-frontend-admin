@@ -35,12 +35,12 @@ const AdminLogin = () => {
         otpPassword: otpString,
       };
       const response = await axios.post(
-        `http://localhost:3001/admin/login`,
+        `${import.meta.env.VITE_BASE_URL}/admin/login`,
         adminLoginObj,
         { withCredentials: true }
       );
       console.log(response);
-      navigate("/");
+      navigate("/admindasboard");
     } catch (error) {
       console.log("error in loginadmin" + error);
     }
@@ -68,7 +68,7 @@ const AdminLogin = () => {
           ))}
         </div>
         <button className="verify-button">Verify</button>
-        <button onClick={() => navigate("/adminsignup")} className="exit-btn">
+        <button onClick={() => navigate("/signup")} className="exit-btn">
           ×
         </button>
       </form>

@@ -15,7 +15,7 @@ const AdminSignup = () => {
         email: email,
         name: name,
       };
-      const response = await axios.post("http://localhost:3001/admin/register", adminObj);
+      const response = await axios.post(`${import.meta.env.VITE_BASE_URL}/admin/register`, adminObj);
       // console.log(response);
       navigate("/login")
     } catch (error) {
@@ -59,7 +59,7 @@ const AdminSignup = () => {
       </form>
       <div className="text-sm text-center mt-[1.6rem]">
         already have an account?{" "}
-        <Link to="/adminlogin" className="login-link">
+        <Link to="/" className="login-link">
           Login!
         </Link>
       </div>
